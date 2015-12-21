@@ -1,0 +1,61 @@
+/*
+ * styles for thick_lines sun scene
+ */
+#app.sun_scene .circle {
+  position: absolute;
+  border-radius: 50%;
+  /*left: 50%;*/
+  transition: opacity .4s;
+  transition-timing-function: ease-in;
+}
+#app.sun_scene .triangle {
+  opacity: 0.0;
+}
+#app.sun_scene #container_01 {
+  left: -25%;
+  top: 0%;
+}
+#app.sun_scene #container_02 {
+  opacity: 0.0;
+}
+
+#app.sun_scene #circle_01 {
+  z-index: 100;
+  background: hsl(14, 84%, 34%);
+  width: 55vw;
+  height: 55vw;
+  margin-top: -27.5vw;
+  margin-left: 22.5vw;
+}
+#app.sun_scene #circle_02 {
+  z-index: 200;
+  background: hsl(16, 88%, 54%);
+  width: 45vw;
+  height: 45vw;
+  margin-top: -22.5vw;
+  margin-left: 27.5vw;
+}
+#app.sun_scene #circle_03 {
+  z-index: 300;
+  background: hsl(25, 91%, 54%);
+  width: 35vw;
+  height: 35vw;
+  margin-top: -17.5vw;
+  margin-left: 32.5vw;
+}
+#app.sun_scene #circle_04 {
+  z-index: 400;
+  background: hsl(35, 95%, 54%);
+  width: 25vw;
+  height: 25vw;
+  margin-top: -12.5vw;
+  margin-left: 37.5vw;
+}
+#app.sun_scene #circle_05 {
+  z-index: 500;
+  background: hsl(42, 98%, 53%);
+  width: 15vw;
+  height: 15vw;
+  margin-top: -7.5vw;
+  margin-left: 42.5vw;
+}

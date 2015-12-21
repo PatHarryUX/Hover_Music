@@ -1,0 +1,110 @@
+/*
+ * styles for thick_lines suns scene
+ */
+#app.suns_scene .circle {
+  position: absolute;
+  border-radius: 50%;
+  transition: opacity .4s;
+  transition-timing-function: ease-in;
+  box-shadow: 0px 4px 10px 1px rgba(100,100,100,0.2);
+}
+#app.suns_scene .triangle {
+  position: absolute;
+  border-radius: 50%;
+  transition: opacity .4s;
+  transition-timing-function: ease-in;
+  box-shadow: 0px 4px 10px 1px rgba(100,100,100,0.2);
+}
+#app.suns_scene #container_01 {
+  left: 0%;
+  top: 0%;
+}
+#app.suns_scene #container_02 {
+  left: 100%;
+  top: 100%;
+}
+#app.suns_scene #circle_01 {
+  z-index: 100;
+  background: #ff5100;
+  width: 75vw;
+  height: 75vw;
+  margin-top: -37.5vw;
+  margin-left: -37.5vw;
+}
+#app.suns_scene #circle_02 {
+  z-index: 200;
+  background: #ff7a00;
+  width: 60vw;
+  height: 60vw;
+  margin-top: -30vw;
+  margin-left: -30vw;
+}
+#app.suns_scene #circle_03 {
+  z-index: 300;
+  background: #ffa300;
+  width: 45vw;
+  height: 45vw;
+  margin-top: -22.5vw;
+  margin-left: -22.5vw;
+}
+#app.suns_scene #circle_04 {
+  z-index: 400;
+  background: #ffcc00;
+  width: 30vw;
+  height: 30vw;
+  margin-top: -15vw;
+  margin-left: -15vw;
+}
+#app.suns_scene #circle_05 {
+  z-index: 500;
+  background: #fff200;
+  width: 15vw;
+  height: 15vw;
+  margin-top: -7.5vw;
+  margin-left: -7.5vw;
+}
+
+#app.suns_scene #triangle_01 {
+  z-index: 100;
+  background: #fff200;
+  width: 55vw;
+  height: 55vw;
+  margin-top: -27.5vw;
+  margin-left: -27.5vw;
+}
+
+#app.suns_scene #triangle_02 {
+  z-index: 200;
+  background: #ffcc00;
+  width: 45vw;
+  height: 45vw;
+  margin-top: -22.5vw;
+  margin-left: -22.5vw;
+}
+
+#app.suns_scene #triangle_03 {
+  z-index: 300;
+  background: #ffa300;
+  width: 35vw;
+  height: 35vw;
+  margin-top: -17.5vw;
+  margin-left: -17.5vw;
+}
+
+#app.suns_scene #triangle_04 {
+  z-index: 400;
+  background: #ff7a00;
+  width: 25vw;
+  height: 25vw;
+  margin-top: -12.5vw;
+  margin-left: -12.5vw;
+}
+
+#app.suns_scene #triangle_05 {
+  z-index: 500;
+  background: #ff5100;
+  width: 15vw;
+  height: 15vw;
+  margin-top: -7.5vw;
+  margin-left: -7.5vw;
+}

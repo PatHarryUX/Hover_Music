@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' >
+    <title>MouseEvent.Audio</title>
+
+    <!-- SCRIPTS -->
+    <!-- cdn's -->
+    <script type='text/javascript' src='http://cdn.tonejs.org/latest/Tone.min.js'></script>
+    <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js'></script>
+
+    <!-- STYLES -->
+    <!-- cdn's -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <!-- app -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scenes/welcome_scene.css">
+    <link rel="stylesheet" href="css/scenes/sun_scene.css">
+    <link rel="stylesheet" href="css/scenes/sea_scene.css">
+    <link rel="stylesheet" href="css/scenes/sky_scene.css">
+    <link rel="stylesheet" href="css/scenes/night_scene.css">
+    <link rel="stylesheet" href="css/scenes/suns_scene.css">
+
+  </head>
+  <body>
+
+    <nav role='navigation'>
+      <ul>
+        <li><a class="nav_link" href="#welcome" id="welcome_nav_link"><span></span></a></li>
+        <li><a class="nav_link" href="#sun" id="sun_nav_link"><span></span></a></li>
+        <li><a class="nav_link" href="#sea" id="sea_nav_link"><span></span></a></li>
+        <li><a class="nav_link" href="#sky" id="sky_nav_link"><span></span></a></li>
+        <li><a class="nav_link" href="#night" id="night_nav_link"><span></span></a></li>
+        <li><a class="nav_link" href="#suns" id="suns_nav_link"><span></span></a></li>
+      </ul>
+    </nav>
+    <div id="title">
+      <h2 class="animated fadeIn">welcome</h2>
+    </div>
+
+    <div id="app"></div>
+
+
+
+    <div class="modal_link_container">
+      <button class="modal_link">?</button>
+    </div>
+
+    <div class="modal">
+      <button role="navigation" id="modal_cancel_button"><i class="fa fa-close fa-2x"></i></button>
+      <p>This is an
+        <a href="http://www.draplin.com/1998/01/ddc114_thick_lines_poster_series.html">
+          Aaron Draplin
+        </a> inspired "digital wind chime" experiment by
+        <a href="http://PatrickHarry.com">
+          Pat Harry
+        </a>.
+        Be sure to have your sound turned on!</p>
+        <p>
+          *cursor by Konstantin  Velichko from the Noun Project
+        </p>
+    </div>
+
+    <div class="black_thing"></div>
+
+
+
+    <script id="welcome-scene-template" type="text/x-handlebars-template">
+
+      <div class="welcome_content_container">
+        <svg id="vector_cursor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 80 80" enable-background="new 0 0 90 90" xml:space="preserve">
+          <path d="M28.856,15.365h3.673v-3.671h-3.673V8.022h-3.673v62.436h7.346v-3.675h-3.673C28.856,66.783,28.856,15.365,28.856,15.365z   M36.2,19.04v-3.674h-3.671v3.674H36.2z M39.875,22.714V19.04H36.2v3.674H39.875z M43.547,26.385v-3.671h-3.672v3.671H43.547z   M47.219,30.057v-3.672h-3.672v3.672H47.219z M50.892,33.731v-3.674h-3.673v3.674H50.892z M54.563,37.403v-3.672h-3.671v3.672  H54.563z M58.238,41.074v-3.671h-3.675v3.671H58.238z M61.909,44.749v-3.675h-3.671v3.675H61.909z M65.58,48.423v-3.674h-3.671  v3.674H65.58z M69.255,55.766v-7.343H65.58v3.67H50.892v7.347h3.671v-3.674C54.563,55.766,69.255,55.766,69.255,55.766z   M39.875,55.766v3.674h3.672v-3.674H39.875z M36.2,63.112h3.675V59.44H36.2V63.112z M43.547,59.44v7.343h3.672V59.44H43.547z   M58.238,66.783V59.44h-3.675v7.343H58.238z M32.529,66.783H36.2v-3.671h-3.671V66.783z M47.219,66.783v7.346h3.673v-7.346H47.219z   M61.909,74.129v-7.346h-3.671v7.346H61.909z M50.892,77.801h7.346v-3.672h-7.346V77.801z"/>
+        </svg>
+      </div>
+
+    </script>
+
+
+    <script id="circles-and-triangles-template" type="text/x-handlebars-template">
+      <div class="container" id="container_01">
+        <div class="circle" id="circle_01" data-music="one"></div>
+        <div class="circle" id="circle_02" data-music="two"></div>
+        <div class="circle" id="circle_03" data-music="three"></div>
+        <div class="circle" id="circle_04" data-music="four"></div>
+        <div class="circle" id="circle_05" data-music="five"></div>
+      </div>
+      <div class="container" id="container_02">
+        <div class="triangle" id="triangle_01" data-music="six"></div>
+        <div class="triangle" id="triangle_02" data-music="seven"></div>
+        <div class="triangle" id="triangle_03" data-music="eight"></div>
+        <div class="triangle" id="triangle_04" data-music="nine"></div>
+        <div class="triangle" id="triangle_05" data-music="ten"></div>
+      </div>
+    </script>
+
+    <script type='text/javascript' src='js/namespace.js'></script>
+    <script type='text/javascript' src='js/synth.js'></script>
+    <script type='text/javascript' src='js/app.js'></script>
+    <script type='text/javascript' src='js/nav_controls.js'></script>
+
+  </body>
+
+</html>

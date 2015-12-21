@@ -1,0 +1,63 @@
+
+#app.welcome_scene .welcome_content_container {
+  margin: 12.5%;
+}
+
+svg#vector_cursor {
+  display: block;
+  width: 35%;
+  margin: 0 auto;
+  transition: all .2s;
+  transform: rotate(70deg);
+}
+svg#vector_cursor path{
+  fill: white;
+  /*background: red;*/
+  stroke: rgba(100,100,100,0.5);
+  stroke-width: 1.5;
+  /*fill: rgba(200,200,200,1.0);*/
+  /*stroke: rgba(100,100,100,1.0);*/
+}
+
+svg#vector_cursor.test_class path{
+  fill: rgba(100,100,100,1.0);
+  stroke: white;
+
+  /*transition-duration: .2s;
+  transition: .2s all;
+  transition-timing-function: ease-in;
+
+  animation-duration: .35s;
+  animation-iteration-count: 1;
+  animation-name: funky_cursor;
+  animation-timing-function: ease-in;*/
+}
+
+/*svg#vector_cursor.test_class fill{
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: funky_cursor;
+  animation-timing-function: ease-in;
+}*/
+
+
+.down_stroke_cursor {
+  fill: rgba(100,100,100,1.0);
+  stroke: white;
+}
+
+
+@keyframes funky_cursor {
+  0% {
+    fill: rgba(200,200,200,1.0);
+    stroke: rgba(100,100,100,1.0);
+  }
+  50% {
+    fill: rgba(100,100,100,1.0);
+    stroke: white;
+  }
+  100% {
+    fill: rgba(200,200,200,1.0);
+    stroke: rgba(100,100,100,1.0);
+  }
+}
